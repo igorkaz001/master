@@ -5,7 +5,7 @@ class GameOne
 	def roomloss
 	puts "the ship has hit the asteroid and lost structural integrity"
 		puts "it blew up with you inside"
-		puts "you roose"
+		puts "you lossed"
 	end
 
 	def roomwin
@@ -15,7 +15,8 @@ class GameOne
 	end
 
 	def rungame #Intro/room1
-	puts "Hello, you are an astronaut stuck on unfamiliar vessel in a locked room facing a terminal near the door"
+	puts "Hello, you are an astronaut stuck on unfamiliar vessel"
+	puts "in a locked room facing a terminal near the door"
 	puts "Please select option 1 to engage the terminal"
 	puts ""
 	input = gets.chomp
@@ -29,7 +30,7 @@ class GameOne
 
 	def random_death(r)
 		roll = rand (1..10)
-		puts "You rolled #{roll}"
+		#puts "You rolled #{roll}" #to test rolls
 		if roll <= r 
 			@roll_value = true
 		else
@@ -38,7 +39,7 @@ class GameOne
 		puts @roll_value
 	end
 	def room1	
-		puts "Welcome to Igorilian Flagship Vessel 'Dienpeace'. Please select a command on the display" #display commands: 1 ship general status 2. open door 3. contact security (will display error) 4. gain access to ship core functions (to be added later)
+		puts "Welcome to a Vessel. Choose:" #display commands: 1 ship general status 2. open door 3. contact security (will display error) 4. gain access to ship core functions (to be added later)
 		puts "Select 1 to open the door and go to next room"
 		puts "Select 2 to view ship status"
 		puts "Select 3 to contact the ship security service"
@@ -48,11 +49,12 @@ class GameOne
 		if input == "1"
 			room2
 		elsif input == "2"
-			puts "ship is on a collision course with an asteroid, there is nobody at the helm"
+			puts "This ship is on a collision course with an asteroid, there is nobody at the helm"
+			puts "Good Luck"
 			room1
 		elsif input == "3"
 			puts "security officers have been dispatched to your location"
-			puts " "
+			puts "*you sigh to yourself, they will never get here in time* "
 			room1
 		elsif input == "4"
 			puts "n/a"
@@ -65,12 +67,12 @@ class GameOne
 
 	def room2 #the hallway/junction
 		puts "you have entered a hallway and are at a junction"
-		puts "you may head toward the bridge to attempt to gain control of the ship"
+		puts "go to the bridge to attempt to gain control of the ship"
 		puts "^ press 1 "
-		puts "or you may head toward escape pods and attempt to get off the ship"
+		puts "go to the escape pods and attempt to get off the ship"
 		puts "^ press 2 "
-		puts "make your choice wisely because the ship may blow at any moment"
-		puts ""
+		puts "make your choice wisely because the ship may blow at any $**~~~~~"
+		puts " "
 		input = gets.chomp
 		
 		if input == 1.to_s 
